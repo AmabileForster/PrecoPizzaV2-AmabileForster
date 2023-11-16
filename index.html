@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Custo-Benefício de Pizzas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center">Cálculo de Custo-Benefício de Pizzas</h1>
+
+        <form id="pizzaForm">
+            <div class="mb-3">
+                <label for="pizzaName" class="form-label">Nome Comercial:</label>
+                <input type="text" id="pizzaName" class="form-control" required>
+            </div>
+
+            <div class="mb-3" id="sizeField">
+                <label for="pizzaSize" class="form-label">Tamanho (cm):</label>
+                <input type="number" id="pizzaSize" class="form-control">
+            </div>
+
+            <div class="mb-3" id="squareFields">
+                <label for="pizzaSide" class="form-label">Lado (cm):</label>
+                <input type="number" id="pizzaSide" class="form-control">
+            </div>
+            
+            <div class="mb-3" id="rectangleFields">
+                <label for="pizzaWidth" class="form-label">Largura (cm):</label>
+                <input type="number" id="pizzaWidth" class="form-control">
+            
+                <label for="pizzaHeight" class="form-label">Altura (cm):</label>
+                <input type="number" id="pizzaHeight" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="pizzaPrice" class="form-label">Preço (R$):</label>
+                <input type="number" id="pizzaPrice" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="pizzaShape" class="form-label">Formato da Pizza:</label>
+                <select id="pizzaShape" class="form-select" required>
+                    <option value="round">Redonda</option>
+                    <option value="square">Quadrada</option>
+                    <option value="rectangle">Retangular</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Adicionar Pizza</button>
+        </form>
+
+        <h2 class="mt-4">Relatório de Custo-Benefício</h2>
+        <table class="table" id="report">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Tam.(cm)</th>
+                    <th>Preço</th>
+                    <th>R$ p/cm²</th>
+                    <th>Diferença %</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
